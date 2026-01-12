@@ -6,30 +6,36 @@
 }
 
 :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #6b7280;
-    --accent-color: #3b82f6;
-    --accent-purple: #8b5cf6;
-    --accent-pink: #ec4899;
-    --accent-orange: #f97316;
-    --accent-green: #10b981;
-    --accent-teal: #14b8a6;
-    --background-color: #ffffff;
-    --background-alt: #f9fafb;
-    --background-tint: #fef3f2;
-    --text-color: #111827;
-    --text-light: #6b7280;
-    --border-color: #e5e7eb;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-    --shadow-colored: 0 10px 25px rgba(59, 130, 246, 0.15);
+    --primary-color: #4E4151;
+    --secondary-color: #9E80A2;
+    --color-lavender: #d8d0e5;
+    --color-purple: #a27fa4;
+    --color-pink: #d589b4;
+    --color-coral: #e77e80;
+    --color-orange: #fdb740;
+    --color-yellow: #ffe18b;
+    --accent-color: #a27fa4;
+    --accent-purple: #d8d0e5;
+    --accent-pink: #d589b4;
+    --accent-orange: #fdb740;
+    --accent-coral: #e77e80;
+    --accent-yellow: #ffe18b;
+    --background-color: #4E4151;
+    --background-alt: #2a2a2a;
+    --background-tint: #2a2a2a;
+    --text-color: #e8e8e8;
+    --text-light: #b8b8b8;
+    --border-color: #3a3a3a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-colored: 0 10px 30px rgba(162, 127, 164, 0.3);
     --transition: all 0.3s ease;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
     background-color: var(--background-color);
 }
 
@@ -41,11 +47,13 @@ body {
 
 /* Navigation */
 .navbar {
-    background: var(--background-color);
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
@@ -66,7 +74,7 @@ body {
 }
 
 .logo:hover {
-    color: var(--accent-color);
+    color: var(--color-pink);
 }
 
 .nav-menu {
@@ -85,7 +93,7 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: var(--accent-color);
+    color: var(--color-pink);
 }
 
 .nav-menu a.active::after {
@@ -95,7 +103,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--accent-color);
+    background: var(--color-pink);
 }
 
 .hamburger {
@@ -108,7 +116,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--text-color);
     transition: var(--transition);
 }
 
@@ -154,13 +162,15 @@ body {
 }
 
 .hero-title {
+    font-family: 'Playfair Display', serif;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 50%, var(--color-coral) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-style: italic;
 }
 
 .hero-subtitle {
@@ -197,25 +207,26 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-pink) 100%);
+    color: var(--background-color);
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%);
+    background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-coral) 100%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-colored);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+    color: var(--color-pink);
+    border: 2px solid var(--color-pink);
 }
 
 .btn-secondary:hover {
-    background: var(--accent-color);
-    color: white;
+    background: var(--color-pink);
+    color: var(--background-color);
     box-shadow: var(--shadow-colored);
 }
 
@@ -225,11 +236,13 @@ section {
 }
 
 .section-title {
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 700;
+    font-style: italic;
     margin-bottom: 3rem;
     text-align: center;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 50%, var(--color-orange) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -238,6 +251,7 @@ section {
 /* Featured Projects */
 .featured-projects {
     background: var(--background-color);
+    padding: 4rem 0;
 }
 
 .projects-grid {
@@ -279,9 +293,11 @@ section {
 }
 
 .project-card-content h3 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
+    font-style: italic;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -293,7 +309,7 @@ section {
 }
 
 .project-link {
-    color: var(--accent-color);
+    color: var(--color-pink);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
@@ -301,13 +317,13 @@ section {
 }
 
 .project-link:hover {
-    color: var(--accent-purple);
+    color: var(--color-coral);
     transform: translateX(3px);
 }
 
 /* Design Philosophy */
 .design-philosophy {
-    background: linear-gradient(180deg, var(--background-alt) 0%, #f0f9ff 100%);
+    background: linear-gradient(180deg, var(--background-color) 0%, #1f1a1f 100%);
 }
 
 .philosophy-grid {
@@ -326,15 +342,15 @@ section {
 }
 
 .philosophy-item:nth-child(1) {
-    border-top-color: var(--accent-color);
+    border-top-color: var(--color-purple);
 }
 
 .philosophy-item:nth-child(2) {
-    border-top-color: var(--accent-pink);
+    border-top-color: var(--color-pink);
 }
 
 .philosophy-item:nth-child(3) {
-    border-top-color: var(--accent-orange);
+    border-top-color: var(--color-coral);
 }
 
 .philosophy-item:hover {
@@ -358,16 +374,18 @@ section {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #f0f9ff 0%, #f5f3ff 50%, #fef3f2 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a1f2a 50%, #1f1a1f 100%);
     padding: 3rem 0;
     border-bottom: 1px solid var(--border-color);
     position: relative;
 }
 
 .page-header h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    font-style: italic;
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 50%, var(--color-orange) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -384,9 +402,11 @@ section {
 }
 
 .about-intro h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
+    font-style: italic;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 50%, var(--color-orange) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -412,9 +432,11 @@ section {
 }
 
 .about-section h3 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
+    font-style: italic;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -453,8 +475,8 @@ section {
 }
 
 .project-card-large {
-    background: var(--background-color);
-    border: 2px solid var(--border-color);
+    background: var(--background-alt);
+    border: 1px solid var(--border-color);
     border-radius: 1rem;
     padding: 2.5rem;
     transition: var(--transition);
@@ -472,7 +494,7 @@ section {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-purple) 50%, var(--accent-pink) 100%);
+    background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-pink) 50%, var(--color-coral) 100%);
     transform: scaleX(0);
     transition: var(--transition);
 }
@@ -484,27 +506,28 @@ section {
 .project-card-large:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-colored);
-    border-color: var(--accent-color);
+    border-color: var(--color-pink);
+    background: #2f2f2f;
 }
 
 .projects-grid a:nth-child(1) .project-card-large::before {
-    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-teal) 100%);
+    background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-lavender) 100%);
 }
 
 .projects-grid a:nth-child(2) .project-card-large::before {
-    background: linear-gradient(90deg, var(--accent-pink) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(90deg, var(--color-pink) 0%, var(--color-coral) 100%);
 }
 
 .projects-grid a:nth-child(3) .project-card-large::before {
-    background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent-pink) 100%);
+    background: linear-gradient(90deg, var(--color-coral) 0%, var(--color-orange) 100%);
 }
 
 .projects-grid a:nth-child(4) .project-card-large::before {
-    background: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-color) 100%);
+    background: linear-gradient(90deg, var(--color-orange) 0%, var(--color-yellow) 100%);
 }
 
 .projects-grid a:nth-child(5) .project-card-large::before {
-    background: linear-gradient(90deg, var(--accent-teal) 0%, var(--accent-green) 100%);
+    background: linear-gradient(90deg, var(--color-pink) 0%, var(--color-purple) 100%);
 }
 
 .project-card-header {
@@ -512,9 +535,11 @@ section {
 }
 
 .project-card-header h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
+    font-style: italic;
     margin-bottom: 0.75rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -534,14 +559,14 @@ section {
 }
 
 .project-card-body .project-link {
-    color: var(--accent-color);
+    color: var(--color-pink);
     font-weight: 600;
     transition: var(--transition);
     display: inline-block;
 }
 
 .project-card-large:hover .project-link {
-    color: var(--accent-purple);
+    color: var(--color-coral);
     transform: translateX(5px);
 }
 
@@ -577,12 +602,12 @@ section {
 .project-tag {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-    color: var(--accent-purple);
+    background: rgba(162, 127, 164, 0.2);
+    color: var(--color-lavender);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 600;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(162, 127, 164, 0.3);
 }
 
 .page-header .project-tag {
@@ -607,14 +632,16 @@ section {
 }
 
 .project-detail-page .project-content h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
+    font-style: italic;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     padding-left: 1rem;
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid var(--color-pink);
 }
 
 .project-detail-page .project-content p {
@@ -646,9 +673,14 @@ section {
 }
 
 .resume-header h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
+    font-style: italic;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 50%, var(--color-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .resume-title {
@@ -661,14 +693,16 @@ section {
 }
 
 .resume-section h3 {
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
+    font-style: italic;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     border-bottom: 3px solid;
-    border-image: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-purple) 100%) 1;
+    border-image: linear-gradient(90deg, var(--color-purple) 0%, var(--color-pink) 100%) 1;
     padding-bottom: 0.5rem;
 }
 
@@ -691,9 +725,11 @@ section {
 }
 
 .skill-category h4 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
+    font-style: italic;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--color-lavender);
 }
 
 .skill-category ul {
@@ -719,24 +755,26 @@ section {
     background: var(--background-alt);
     padding: 2rem;
     border-radius: 1rem;
-    border-left: 4px solid;
-    border-image: linear-gradient(180deg, var(--accent-color) 0%, var(--accent-purple) 100%) 1;
+    border-left: 4px solid var(--color-pink);
     transition: var(--transition);
 }
 
 .project-item:hover {
     transform: translateX(5px);
     box-shadow: var(--shadow);
+    background: #2f2f2f;
 }
 
 .project-item h4 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
+    font-style: italic;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: var(--color-lavender);
 }
 
 .project-type {
-    color: var(--accent-color);
+    color: var(--color-pink);
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 0.875rem;
@@ -762,7 +800,7 @@ section {
 }
 
 .principles-list strong {
-    color: var(--primary-color);
+    color: var(--color-lavender);
     display: block;
     margin-bottom: 0.5rem;
 }
