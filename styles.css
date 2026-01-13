@@ -818,11 +818,24 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
+    background: var(--background-color);
+    padding: 3rem 0;
     margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-signature {
+    height: 60px;
+    width: auto;
+    opacity: 0.8;
+    filter: brightness(1.2);
+    transition: var(--transition);
+}
+
+.footer-signature:hover {
+    opacity: 1;
+    filter: brightness(1.4);
 }
 
 /* Responsive Design */
@@ -890,6 +903,28 @@ section {
     }
 }
 
+/* Footer */
+.footer {
+    background: var(--background-color);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-signature {
+    height: 60px;
+    width: auto;
+    opacity: 0.8;
+    filter: brightness(1.2);
+    transition: var(--transition);
+}
+
+.footer-signature:hover {
+    opacity: 1;
+    filter: brightness(1.4);
+}
+
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
@@ -902,5 +937,9 @@ section {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .footer-signature {
+        height: 45px;
     }
 }

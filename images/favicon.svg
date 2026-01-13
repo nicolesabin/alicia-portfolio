@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d8d0e5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d589b4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e77e80;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a27fa4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d589b4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle with gradient -->
+  <circle cx="32" cy="32" r="30" fill="url(#grad1)"/>
+  <!-- Letter "A" design -->
+  <path d="M32 12 L42 50 L38 50 L36 42 L28 42 L26 50 L22 50 Z M30 36 L34 36 L32 26 Z" fill="#2a2a2a" opacity="0.9"/>
+  <!-- Decorative accent -->
+  <circle cx="48" cy="16" r="4" fill="url(#grad2)" opacity="0.8"/>
+  <circle cx="16" cy="48" r="3" fill="#fdb740" opacity="0.7"/>
+</svg>
