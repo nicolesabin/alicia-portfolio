@@ -1,3 +1,6 @@
+/* Load site fonts in one place so all pages stay consistent */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -65,15 +68,19 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
+    display: block;
     text-decoration: none;
     transition: var(--transition);
 }
 
-.logo:hover {
-    color: var(--color-lavender);
+.logo img {
+    display: block;
+    height: 36px;
+    width: auto;
+}
+
+.logo:hover img {
+    opacity: 0.9;
 }
 
 .nav-menu {
@@ -153,11 +160,35 @@ body {
     border-radius: 50%;
 }
 
-.hero-content {
-    max-width: 800px;
-    text-align: center;
+.hero-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
     position: relative;
     z-index: 1;
+}
+
+.hero-image {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-header {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
 }
 
 .hero-title {
@@ -165,7 +196,7 @@ body {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 50%, var(--color-coral) 100%);
+    background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink) 75%, var(--color-coral) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -175,13 +206,21 @@ body {
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--text-light);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.hero-body {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero-description {
     font-size: 1.125rem;
     color: var(--text-light);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 1.8;
 }
 
@@ -491,6 +530,14 @@ main:has(.resume-content) .page-header {
     border-bottom: 1px solid var(--border-color);
 }
 
+main:has(.about-content) .page-header .lead {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    line-height: 1.8;
+}
+
 main:has(.about-content) .page-header h1,
 main:has(.resume-content) .page-header h1 {
     font-size: 4rem;
@@ -510,9 +557,15 @@ main:has(.resume-content) .resume-header h2 {
     -webkit-text-fill-color: var(--color-purple);
 }
 
-/* About, Work with Me, Resume - H3 darker for contrast */
+/* About - H2s use darker purple from brand */
+main:has(.about-content) .about-section h2,
 main:has(.about-content) .about-section h3,
-main:has(.about-content) .philosophy-item h3,
+main:has(.about-content) .philosophy-item h3 {
+    color: var(--primary-color);
+    background: none;
+    -webkit-text-fill-color: var(--primary-color);
+}
+
 main:has(.resume-content) .resume-section h3 {
     color: #2a2a2a;
     background: none;
@@ -580,6 +633,7 @@ main:has(.resume-content) .page-subtitle {
     margin: 0 auto;
 }
 
+.about-section h2,
 .about-section h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
@@ -595,6 +649,35 @@ main:has(.resume-content) .page-subtitle {
     color: var(--text-light);
     line-height: 1.8;
     font-size: 1.125rem;
+}
+
+.about-section-intro {
+    margin-bottom: 1.5rem;
+}
+
+/* About page: 4 columns × 1 row image grid */
+.about-image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 0;
+}
+
+.about-image-grid img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+/* Creating for Fun: square images */
+.about-image-grid--square img {
+    aspect-ratio: 1 / 1;
+}
+
+/* Behind the Scenes: vertical rectangles */
+.about-image-grid--portrait img {
+    aspect-ratio: 3 / 4;
 }
 
 .about-cta {
@@ -1341,6 +1424,29 @@ main:has(.project-detail-page) .project-tag {
         margin: 1rem 0;
     }
 
+    .hero-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .hero-header {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .hero-body {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -1385,6 +1491,10 @@ main:has(.project-detail-page) .project-tag {
         grid-template-columns: 1fr;
     }
 
+    .about-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .project-card-large {
         padding: 1.5rem;
     }
@@ -1415,6 +1525,15 @@ main:has(.project-detail-page) .project-tag {
 }
 
 @media (max-width: 480px) {
+    .about-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
