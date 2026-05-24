@@ -1211,6 +1211,7 @@ main:has(.project-detail-page) .project-tag {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-style: italic;
+    color: #4E4151;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-pink) 100%);
     -webkit-background-clip: text;
