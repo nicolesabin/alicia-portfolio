@@ -178,8 +178,8 @@ body {
 }
 
 .hero-image img {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: var(--shadow-lg);
