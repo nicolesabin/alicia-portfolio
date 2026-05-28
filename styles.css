@@ -500,6 +500,216 @@ section {
     line-height: 1.8;
 }
 
+/* Contact Form Styles */
+.page-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #262222;
+    text-align: center;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.contact-form-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: #f9f9f9;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.required {
+    color: var(--accent-coral);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    color: #262222;
+    background: #ffffff;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    line-height: 1.5;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(20, 83, 76, 0.1);
+}
+
+.form-input:invalid:not(:placeholder-shown),
+.form-textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-error {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.01em;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit {
+    background: var(--secondary-color); /* Darkened for WCAG AA contrast */
+    color: #fff !important;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-submit:hover {
+    background: var(--primary-color);
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(213, 137, 180, 0.4);
+    border-color: transparent;
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-reset {
+    background: #ffffff;
+    color: var(--secondary-color) !important;
+    border: 2px solid var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-reset:hover {
+    background: var(--primary-color); /* Darkened for WCAG AA contrast */
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+.btn-reset:active {
+    transform: translateY(0);
+}
+
+.contact-info-section {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.contact-info-card {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.contact-info-title {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-info-text {
+    color: #262222;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-email-direct {
+    margin: 0;
+}
+
+.contact-email-link {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.contact-email-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+/* Contact Form Responsive */
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+
+    .contact-info-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
 /* Page Header - default for projects listing etc. */
 .page-header {
     background: var(--primary-color);
