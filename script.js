@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `Message:\n${message}`
         );
 
-        const mailtoLink = `mailto:${recipientEmail}<br>?subject=${emailSubject}<br>&body=${emailBody}`;
+        const mailtoLink = `mailto:${recipientEmail}?subject=${emailSubject}&body=${emailBody}`;
 
         // Open email client
         window.location.href = mailtoLink;
