@@ -659,7 +659,7 @@ section {
 
 .contact-info-title {
     font-size: 1.75rem;
-    color: var(--color-primary);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -676,7 +676,7 @@ section {
 
 .contact-email-link {
     font-size: 1.25rem;
-    color: var(--color-primary);
+    color: var(--primary-color);
     text-decoration: underline;
     font-weight: 600;
     transition: var(--transition);
@@ -684,7 +684,7 @@ section {
 }
 
 .contact-email-link:hover {
-    color: var(--color-primary-dark);
+    color: var(--primary-color);
     text-decoration: underline;
     transform: translateY(-2px);
 }
