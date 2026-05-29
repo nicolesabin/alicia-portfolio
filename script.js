@@ -83,4 +83,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Contact Form Handler
