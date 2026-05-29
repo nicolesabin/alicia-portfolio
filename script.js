@@ -190,5 +190,11 @@ document.addEventListener('DOMContentLoaded', function() {
         inputs.forEach(input => {
             input.classList.remove('error');
         });
+        then(response => {
+            if (response.ok) {
+            form.reset(); // Clears all input fields
+            }
+        })
+        
     });
 });
