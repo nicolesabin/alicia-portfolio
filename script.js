@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-        }, 20);
+        }, 2000);
     });
 
     // Reset form
