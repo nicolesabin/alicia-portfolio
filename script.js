@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     });
 
-    // Reset form
+ // Reset form
     contactForm.addEventListener('reset', function() {
         const errorElements = contactForm.querySelectorAll('.form-error');
         errorElements.forEach(error => {
@@ -190,10 +190,5 @@ document.addEventListener('DOMContentLoaded', function() {
         inputs.forEach(input => {
             input.classList.remove('error');
         });
-        then(response => {
-        form.reset(); // Add this line to clear the fields!
-        alert('Form submitted successfully!');
-        });
     });
 });
-
