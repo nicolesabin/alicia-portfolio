@@ -1,8 +1,8 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars($_POST['message']);
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $name = htmlspecialchars($_GET['name']);
+    $email = filter_var($_GET['email'], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars($_GET['message']);
 
     // Recipient email address
     $to = "alicia.n.creative@gmail.com";
