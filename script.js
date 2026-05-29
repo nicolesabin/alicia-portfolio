@@ -190,6 +190,10 @@ document.addEventListener('DOMContentLoaded', function() {
         inputs.forEach(input => {
             input.classList.remove('error');
         });
+        then(response => {
+        form.reset(); // Add this line to clear the fields!
+        alert('Form submitted successfully!');
+        });
     });
 });
 
