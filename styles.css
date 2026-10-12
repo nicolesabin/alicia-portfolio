@@ -1775,8 +1775,8 @@ main:has(.project-detail-page) .project-tag {
 /* Flexbox track with horizontal scrolling and scroll snap behavior */
 .carousel-track {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Hides default scrollbar for Firefox */
 }
