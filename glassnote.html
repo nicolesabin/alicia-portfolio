@@ -120,51 +120,29 @@
 					</div>
 
                     <!--carousel-->
-                    <div id="c.container">
-                        
-                        
-                        <input hidden type="radio" name="carousel-control" id="button_a" checked/>
-                        <input hidden type="radio" name="carousel-control" id="button_b"/>
-                        <input hidden type="radio" name="carousel-control" id="button_c"/>
-                        <input hidden type="radio" name="carousel-control" id="button_d"/>            
-                                
-                        
-                        <div id="carousel">
-                            <div class="p-wrapper">
-                                        
-                                <section class="panel_a">
-                                    <h1>Basic Vertical CSS Carousel Demo</h1>
-                                    <h2>Panel a</h2>
-                                    <img src="images/glassnote_glassnote-1-primary.jpg" alt="Glassnote rebrand: primary mark">
-                                </section>
-                                        
-                                <section class="panel_b">
-                                    <h2>Panel b</h2>
-                                    <img src="images/glassnote_glassnote-2-moodboard.jpg" alt="Glassnote rebrand: mood board">
-                                </section>
-                                        
-                                <section class="panel_c">
-                                    <h2>Panel c</h2>
-                                    <img src="images/glassnote_glassnote-3-ideations.jpg" alt="Glassnote rebrand: ideations">
-                                </section>
-                                        
-                                <section class="panel_d">
-                                    <img src="images/glassnote_glassnote-5-bus-cards.jpg" alt="Glassnote rebrand: business cards">
-                                </section>
-                                        
-                            </div> <!-- // .p-wrapper -->
-                        </div> <!-- // #carousel -->            
-                                
-                        
-                        <div id="c.navigation">
-                            <label for="button_a" class="label_a"> <span>a</span> </label>
-                            <label for="button_b" class="label_b"> <span>b</span> </label>
-                            <label for="button_c" class="label_c"> <span>c</span> </label>
-                            <label for="button_d" class="label_d"> <span>d</span> </label>
-                        </div> <!-- // #navigation -->               
-                                
-                        
-                    </div> <!-- // #container -->
+                    <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide" id="slide-1">
+                        <img src="images/glassnote_glassnote-1-primary.jpg" alt="Glassnote rebrand: primary mark">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide" id="slide-2">
+                        <img src="images/glassnote_glassnote-2-moodboard.jpg" alt="Glassnote rebrand: mood board">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide" id="slide-3">
+                        <img src="images/glassnote_glassnote-3-ideations.jpg" alt="Glassnote rebrand: ideations">
+                        </div>
+                    </div>
+
+                    <!-- Navigation Dots -->
+                    <div class="carousel-nav">
+                        <a href="#slide-1" class="nav-dot"></a>
+                        <a href="#slide-2" class="nav-dot"></a>
+                        <a href="#slide-3" class="nav-dot"></a>
+                    </div>
+                    </div>
 
                 </div>
             </div>
