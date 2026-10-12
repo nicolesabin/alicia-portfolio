@@ -1775,7 +1775,7 @@ main:has(.project-detail-page) .project-tag {
 /* Flexbox track with horizontal scrolling and scroll snap behavior */
 .carousel-track {
   display: flex;
-  overflow-y: auto;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Hides default scrollbar for Firefox */
@@ -1815,11 +1815,11 @@ main:has(.project-detail-page) .project-tag {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #9E80A2;
   transition: background-color 0.3s ease;
 }
 
 .nav-dot:hover {
-  background-color: #666;
+  background-color: #4E4151;
 }
             
