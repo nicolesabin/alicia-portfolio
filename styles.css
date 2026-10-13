@@ -1796,7 +1796,6 @@ main:has(.project-detail-page) .project-tag {
 /* Fluid images filling the slide dimension properly */
 .carousel-slide img {
   width: 100%;
-  height: fit-content;
   display: block;
   object-fit: cover;
   border-radius: 8px;
