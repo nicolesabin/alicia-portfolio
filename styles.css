@@ -1768,7 +1768,6 @@ main:has(.project-detail-page) .project-tag {
 /* Container sizing and centering */
 .carousel-container {
   max-width: 800px;
-  max-height: 300px;
   margin: 2rem auto;
   position: relative;
 }
@@ -1791,6 +1790,7 @@ main:has(.project-detail-page) .project-tag {
 .carousel-slide {
   flex: 0 0 100%;
   width: 100%;
+  height: fit-content;
   scroll-snap-align: start;
 }
 
