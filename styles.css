@@ -1790,7 +1790,7 @@ main:has(.project-detail-page) .project-tag {
 .carousel-slide {
   flex: 0 0 100%;
   width: 100%;
-  height: fit-content;
+  height: 800px;;
   scroll-snap-align: start;
 }
 
