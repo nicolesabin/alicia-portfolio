@@ -1768,6 +1768,7 @@ main:has(.project-detail-page) .project-tag {
 /* Container sizing and centering */
 .carousel-container {
   max-width: 800px;
+  max-height: 900px;
   margin: 2rem auto;
   position: relative;
 }
