@@ -1790,13 +1790,14 @@ main:has(.project-detail-page) .project-tag {
 .carousel-slide {
   flex: 0 0 100%;
   width: 100%;
+  aspect-ratio: 12 / 9; /* Enforces a proportional aspect ratio */
   scroll-snap-align: start;
 }
 
 /* Fluid images filling the slide dimension properly */
 .carousel-slide img {
   width: 100%;
-  height: 600px;
+  height: 100%;
   display: block;
   object-fit: cover;
   border-radius: 8px;
